@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Code Camp Heatmap project">
+  <meta name="author" content="Kelsey Hutchison">
+
+
+  <title>Land Surface Temperature Heatmap</title>
+
+  <script
+    src="http://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+    crossorigin="anonymous"></script>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+
+  <style>
+    #svg_wrapper {
+    border:2px solid black;
+    border-radius:2px;
+    padding:10px;
+    margin:auto auto;
+    }
+    h1, #info {
+    font-family: sans-serif;
+    }
+    svg {
+    /*border:1px solid gray;*/
+    border-radius:2px;
+    margin:auto auto;
+    font-family: sans-serif;
+    }
+    rect {
+    padding:0px;
+    margin:0px;
+    }
+    rect:hover {
+    stroke:#000;
+    stroke-width: 1px;
+    }
+    .label, .legendTitle {
+    font-family: sans-serif;
+    font-size: 10px;
+    width:30px;
+    }
+    .legendTitle {
+    position:relative;
+    top:100px;
+    }
+
+    .tooltip {
+    position:absolute;
+    left:250px;
+    top:250px;
+    /*width:81px;
+    height:50px;*/
+    border-radius:2px;
+    font-family:sans-serif;
+    font-size:10px;
+    text-align:center;
+    line-height:1.5em;
+    padding:1px;
+    opacity:0;
+    }
+    .tooltip.lit {
+    border:3px outset #d73027;
+    background-color:#c5e3ff;
+    opacity:.8;
+    }
+    #info {
+      font-size: xx-small;
+    }
+
+  </style>
+
+
+</head>
+
+<body>
+  <div id="svg_wrapper">
+<svg width=1200 height="600">
+<h1>Monthly Global Land-Surface Temperature</h1></svg>
+<div class="tooltip"></div>
+<div id="info">Data from https://raw.githubusercontent.com/FreeCodeCamp/ProjectReferenceData/master/global-temperature.json<br>
+</div>
+
+</div>
+
+<script src="./heatmap.js"></script>
+
+  </body>
+</html>
